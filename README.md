@@ -2,26 +2,104 @@
 
 ![Readen](legacy/Readen.png)
 
-A lightweight, self-hosted EPUB reader that lets you read through EPUB books one chapter at a time. This makes it very easy to copy paste the contents of a chapter to an LLM, to read along. Basically - get epub books (e.g. [Project Gutenberg](https://www.gutenberg.org/) has many), open them up in this reader, copy paste text around to your favorite LLM, and read together and along.
+**Readen** — это легковесный, self-hosted EPUB ридер для комфортного чтения книг с возможностью копирования текста глав в LLM.
 
-This project was 90% vibe coded just to illustrate how one can very easily [read books together with LLMs](https://x.com/karpathy/status/1990577951671509438). I'm not going to support it in any way, it's provided here as is for other people's inspiration and I don't intend to improve it. Code is ephemeral now and libraries are over, ask your LLM to change it in whatever way you like.
+---
 
-## Usage
+## 🎯 Цель проекта
 
-The project uses [uv](https://docs.astral.sh/uv/). So for example, download [Dracula EPUB3](https://www.gutenberg.org/ebooks/345) to this directory as `dracula.epub`, then:
+Проект создан для удобного чтения EPUB книг с возможностью быстрого копирования контента глав для работы с большими языковыми моделями (LLM). Идеально подходит для интерактивного чтения и анализа текста вместе с AI-ассистентами.
 
-```bash
-uv run legacy/readen.py dracula.epub
+---
+
+## ✨ Основные возможности
+
+*   📚 **Загрузка EPUB книг** из [Project Gutenberg](https://www.gutenberg.org/) и других источников
+*   📖 **Постраничное чтение** — навигация по главам
+*   📋 **Быстрое копирование текста** для работы с LLM
+*   🗄️ **Локальная библиотека** — все книги хранятся на вашем компьютере
+*   🎨 **Минималистичный интерфейс** — ничего лишнего
+
+---
+
+## 🚀 Быстрый старт
+
+### Требования
+
+*   **Python 3.10+**
+*   **[uv](https://docs.astral.sh/uv/)** — менеджер зависимостей
+
+### Установка и запуск
+
+1.  **Скачайте EPUB книгу** (например, [Dracula от Gutenberg](https://www.gutenberg.org/ebooks/345)) и поместите в корень проекта:
+    ```bash
+    # Пример: dracula.epub
+    ```
+
+2.  **Обработайте EPUB файл:**
+    ```bash
+    uv run legacy/readen.py dracula.epub
+    ```
+    Это создаст директорию `dracula_data` с обработанной книгой.
+
+3.  **Запустите веб-сервер:**
+    ```bash
+    uv run legacy/server.py
+    ```
+
+4.  **Откройте браузер:**
+    Перейдите на [http://localhost:8123](http://localhost:8123) и начните читать!
+
+---
+
+## 📂 Структура проекта
+
+```
+Readen/
+├── backend/           # Современный бэкенд на FastAPI (в разработке)
+│   └── app/
+│       ├── main.py        # API endpoints
+│       ├── models.py      # SQLAlchemy модели
+│       ├── database.py    # Настройка БД
+│       └── services.py    # Бизнес-логика
+├── legacy/            # Рабочая версия ридера
+│   ├── readen.py      # EPUB процессор
+│   ├── server.py      # FastAPI сервер
+│   └── templates/     # HTML шаблоны
+├── GEMINI.md          # AI системные инструкции
+├── PHILOSOPHY.md      # Философия разработки
+├── TECH_GUIDE.md      # Технические стандарты
+└── README.md          # Этот файл
 ```
 
-This creates the directory `dracula_data`, which registers the book to your local library. We can then run the server:
+---
 
-```bash
-uv run legacy/server.py
-```
+## 🛠️ Технологии
 
-And visit [localhost:8123](http://localhost:8123/) to see your current Library. You can easily add more books, or delete them from your library by deleting the folder. It's not supposed to be complicated or complex.
+*   **Backend:** FastAPI, SQLAlchemy, SQLite
+*   **EPUB Processing:** ebooklib, BeautifulSoup4
+*   **Frontend (legacy):** Jinja2 Templates
+*   **Package Manager:** uv
 
-## License
+---
 
-MIT
+## 🗺️ Roadmap
+
+- [x] Legacy версия с базовым функционалом
+- [x] Бэкенд на FastAPI с SQLite
+- [ ] React фронтенд с Tailwind CSS
+- [ ] Загрузка файлов через API
+- [ ] Трекинг прогресса чтения
+- [ ] Поддержка других форматов (PDF, MOBI)
+
+---
+
+## 📄 Лицензия
+
+MIT License — используйте свободно и модифицируйте под свои нужды.
+
+---
+
+## 🤝 Вклад в проект
+
+Проект открыт для улучшений! Создавайте Issues и Pull Requests.
