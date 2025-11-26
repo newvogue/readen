@@ -1,15 +1,15 @@
-# ReadEn Project Context
+# Readen Project Context
 
 ## Project Overview
 
-ReadEn is a lightweight, self-hosted EPUB reader that allows users to read EPUB books one chapter at a time. It's designed to make it easy to copy and paste chapter contents to an LLM (Large Language Model) for interactive reading experiences. The project has both a legacy implementation and a newer backend implementation using modern Python web technologies.
+Readen is a lightweight, self-hosted EPUB reader that allows users to read EPUB books one chapter at a time. It's designed to make it easy to copy and paste chapter contents to an LLM (Large Language Model) for interactive reading experiences. The project has both a legacy implementation and a newer backend implementation using modern Python web technologies.
 
 The project was originally "90% vibe coded" to demonstrate how to read books together with LLMs, as referenced by Andrej Karpathy's tweet about reading with LLMs.
 
 ## Project Structure
 
 ```
-ReadEn/
+Readen/
 ├── backend/           # Modern FastAPI-based backend implementation
 │   └── app/
 │       ├── __init__.py
@@ -23,7 +23,7 @@ ReadEn/
 │   ├── templates/     # HTML templates for web interface
 │   │   ├── library.html
 │   │   └── reader.html
-│   └── ReadEn.png     # Project logo image
+│   └── Readen.png     # Project logo image
 ├── pyproject.toml     # Project dependencies and metadata
 ├── uv.lock           # Dependency lock file (uv package manager)
 ├── README.md         # Project documentation

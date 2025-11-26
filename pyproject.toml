@@ -1,5 +1,5 @@
 [project]
-name = "ReadEn"
+name = "Readen"
 version = "0.1.0"
 description = "Simple EPUB reader web app"
 readme = "README.md"

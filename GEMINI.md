@@ -37,7 +37,7 @@
 ## 4. КОНТЕКСТ ПРОЕКТА (Project Context)
 
 ### Обзор (Overview)
-**ReadEn** — это легковесный, self-hosted EPUB ридер.
+**Readen** — это легковесный, self-hosted EPUB ридер.
 *   **Цель:** Удобное чтение книг и копирование глав для скармливания LLM.
 *   **Стек:** Python 3.10+, FastAPI, SQLite, React (планируется), Tailwind CSS.
 

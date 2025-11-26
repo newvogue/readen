@@ -55,7 +55,7 @@
 
 ---
 
-## 4. Стек Технологий (ReadEn Specific)
+## 4. Стек Технологий (Readen Specific)
 
 ### Backend (FastAPI)
 *   Используй `async/await` для I/O операций.
