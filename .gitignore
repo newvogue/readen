@@ -15,3 +15,11 @@ wheels/
 *.db
 *.sqlite
 .env
+
+# AI Instructions (local only)
+QWEN.md
+GEMINI.md
+PHILOSOPHY.md
+TECH_GUIDE.md
+Dialectical_Prompt_Template.md
+Universal_Prompt_Template.md
