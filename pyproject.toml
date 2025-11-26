@@ -1,0 +1,14 @@
+[project]
+name = "Readen"
+version = "0.1.0"
+description = "Simple EPUB reader web app"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "beautifulsoup4>=4.14.2",
+    "ebooklib>=0.20",
+    "fastapi>=0.121.2",
+    "jinja2>=3.1.6",
+    "sqlalchemy>=2.0.44",
+    "uvicorn>=0.38.0",
+]
