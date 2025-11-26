@@ -6,7 +6,7 @@ from .database import SessionLocal, engine
 
 models.Base.metadata.create_all(bind=engine)
 
-app = FastAPI(title="Readen API")
+app = FastAPI(title="ReadEn API")
 
 # Dependency
 def get_db():
